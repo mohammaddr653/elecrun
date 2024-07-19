@@ -1,0 +1,140 @@
+  
+div#header-container{
+    background-color: rgba(255, 255, 255, 0);
+    position: fixed;
+    top: 0;
+    transition: all .3s;
+    z-index: 3;
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+div#header-container.header-container-change{
+    background-color: white;
+    transition: all .3s;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
+
+}
+div#header-container>div{
+    /* background-color: yellow; */
+    padding: 10px 20px;
+}
+div#header-container div.menu-right{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 100px;
+}
+div#header-container div.menu-right>div.image{
+    background-color: #444;
+    aspect-ratio: 100/20;
+    width: 100px;
+}
+/* div#header-container>div>div.menu-right>div.image>a{
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 500;
+} */
+div#header-container div.menu-right>div{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+}
+div#header-container div.menu-right nav>ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 30px;
+    /* background-color: #444; */
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'iransans';
+    font-weight: 300;
+    font-size: 14px;
+}
+div#header-container div.menu-right nav>ul>a{
+    color: #444;
+
+}
+div#header-container div.menu-right button.search{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+    font-family: 'iransans';
+    color: #444;
+    font-weight: 300;
+    font-size: 14px;
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+
+}
+div#header-container div.menu-right button.search span{
+    padding: 7px;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 100%;
+    background-color: #444;
+}
+div#header-container div.menu-right button.search svg{
+    /* background-color: #444; */
+    /* padding: 10px; */
+    /* border-radius: 100%; */
+    fill: white;
+    width: 100%;
+    height: 100%;
+}
+
+
+
+div#header-container div.menu-left>button{
+
+    border: none;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+div#header-container>div.mobile-menu{
+    background-color: red;
+    height: 100vh;
+    width: 90vw;
+    position: fixed;
+    top: 0;
+    left: -100vw;
+    z-index: 1;
+    transition: all .3s ease-out;
+
+}
+div#header-container>div.mobile-menu.open{
+
+    transition: all .3s ease-out;
+    left: 0;
+}
+div#header-container>div.dark-face{
+
+    background-color: rgba(0, 0, 0, 0.53);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 0;
+    transition: all .3s ease-out;
+
+}
+div#header-container>div.dark-face.show{
+    display: block;
+    transition: all .3s ease-out;
+
+
+}

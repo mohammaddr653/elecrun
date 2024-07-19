@@ -1,0 +1,224 @@
+div#footer{
+    margin-top: 70px;
+    background-color: #1A191D;
+}
+div#footer div.container{
+    background-color: #1A191D;
+    font-size: 13px;
+    font-family: 'iransans';
+    font-weight: 300;
+    color: #333;
+    padding: 20px 0;
+
+    /* padding: ; */
+
+}
+div#footer div.container div.footer-top div.footer-logo>a>h2{
+    font-size: 30px;
+    font-weight: 400;
+    color: white;
+    margin: 0;
+    padding: 20px 0;
+}
+div#footer div.container div.footer-top div.footer-phones>p{
+    color: #d3d3d3;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    font-weight: 200;
+}
+div#footer div.container div.footer-bottom{
+    margin: 0;
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: green; */
+    /* align-items: center;
+    justify-content: center; */
+}
+div#footer div.container div.footer-bottom>div{
+    display: flex;
+    /* align-items: center; */
+    justify-content: start;
+}
+div#footer div.container div.footer-bottom>div:last-child{
+
+    width: fit-content;
+}
+div#footer div.container div.footer-bottom div.footer-list{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content:start;
+    align-items: start;
+    width: fit-content;
+    /* background-color: yellow; */
+
+}
+div#footer div.container div.footer-bottom div.footer-list>h3{
+    font-size: 18px;
+    font-weight: 300;
+    color: whitesmoke;
+
+}
+div#footer div.container div.footer-bottom div.footer-list>ul{
+
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    padding: 0;
+
+}
+div#footer div.container div.footer-bottom div.footer-list>ul>li>a{
+
+    color: #d3d3d3;
+    font-weight: 200;
+}
+div#footer div.container div.footer-bottom div.footer-promote{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+}
+div#footer div.container div.footer-bottom div.footer-promote>h3{
+
+    font-size: 18px;
+    font-weight: 300;
+    color: whitesmoke;
+
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-social-links{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+    margin-top: 10px;
+
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-social-links svg{
+
+    fill: #d3d3d3;
+    width: 20px;
+    height: 20px;
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail{
+    /* background-color: greenyellow; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    margin-top: 30px;
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail h3{
+    font-size: 18px;
+    font-weight: 300;
+    color: whitesmoke;
+    padding: 5px 0;
+
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail>form{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail>form>input{
+    border: none;
+    outline: none;
+    padding: 10px;
+    border-radius: 5px;
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail>form>button{
+
+    background-color: #7C4FE0;
+    color: white;
+    height: 100%;
+    width: 50px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail>form>button:disabled{
+
+    background-color: #d3d3d3;
+    color: #666;
+
+}
+div#footer div.container hr{
+    margin: 30px 0;
+}
+div#footer div.container div.copyright{
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #d3d3d3;
+    font-weight: 200;
+}
+
+
+@media only screen and (max-width: 750px) {
+    div#footer div.container{
+
+        padding: 20px 10px;
+    }
+    div#footer div.container div.footer-top{
+        text-align: center;
+    }
+    div#footer div.container div.footer-bottom>div:last-child{
+
+        width: 100%;
+    }    
+    div#footer div.container div.footer-bottom>div{
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+    }    
+    div#footer div.container div.footer-bottom div.footer-list{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content:start;
+        align-items: center;
+        width: fit-content;
+        text-align: center;
+        /* background-color: yellow; */
+    
+    }
+    div#footer div.container div.footer-bottom div.footer-promote{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        text-align: center;
+    
+    }
+    div#footer div.container div.footer-bottom div.footer-promote>div.footer-mail {
+        /* background-color: greenyellow; */
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        margin-top: 30px;
+    }
+    div#footer div.container div.footer-bottom{
+        margin: 0;
+        margin-top: 30px;
+        display: flex;
+        gap: 30px;
+        flex-direction: row;
+        justify-content: space-between;
+        /* background-color: green; */
+        /* align-items: center;
+        justify-content: center; */
+    }
+    
+    
+}

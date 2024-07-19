@@ -1,0 +1,17 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    overflow-x: hidden;
+    background-color: rgb(157, 65, 65);
+}
+a{
+    text-decoration: none;
+}
+div#home-page{
+    width: 100vw;
+    overflow-x: hidden;
+    height: 300vh;
+}
