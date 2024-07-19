@@ -1,7 +1,7 @@
 div.search-container{
     position: relative;
     /* background-color: red; */
-    width: 50%;
+    width: 100%;
 }
 div.search-container>div.search-box{
     background-color:white;
@@ -12,6 +12,8 @@ div.search-container>div.search-box{
     flex-wrap: nowrap;
     justify-content: start;
     align-items: center;
+    box-shadow: 0 0 2px .5px #999;
+
     border-radius: 5px;
 }
 div.search-container>div.search-box>svg{
@@ -29,6 +31,8 @@ div.search-container>div.search-box>input{
     font-weight: 300;
     color: #333;
     width: 100%;
+    /* box-shadow: 0 0 2px .5px #999; */
+
     /* background-color: red; */
 }
 
@@ -44,11 +48,11 @@ div.search-container>div.search-result-box{
     /* position: absolute; */
     margin-top: 10px;
     left: 0;
-    /* display: none; */
+    display: flex;
     /* width: 300px; */
     /* min-height: 20px; */
     background-color: white;
-    box-shadow: 0 0 2px .5px #999;
+    /* box-shadow: 0 0 2px .5px #999; */
     /* display: flex; */
     flex-direction: column;
     justify-content: start;
@@ -56,12 +60,17 @@ div.search-container>div.search-result-box{
     gap: 10px;
     padding: 10px;
     border-radius: 5px;
+    box-shadow: 0 0 2px .5px #999;
+
 
 
 }
-/* div.search-container>div.search-result-box.search-result-show{
+div.search-container>div.search-result-box.search-result-mobile{
+display: none;
+}
+div.search-container>div.search-result-box.search-result-show{
     display: flex;
-} */
+}
 div.search-container>div.search-result-box>div.search-box-head{
 
     /* background-color: yellow; */

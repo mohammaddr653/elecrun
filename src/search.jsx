@@ -44,14 +44,23 @@ const Search = (props) => {
     function searchEnabled(){
         let searchInput = document.querySelectorAll('div.search-container input.search-input')[tagNum];
         let searchResultBox = document.querySelectorAll('div.search-container div.search-result-box')[tagNum];
+        if(tagNum !== 0){
+            console.log("unclicked");
+            searchResultBox.classList.add('search-result-mobile');    
+        }
     
         searchInput.addEventListener("focusin",function(){
-            console.log("clicked");
-            searchResultBox.classList.add('search-result-show');
+            if(tagNum !== 0){
+                console.log("clicked");
+                searchResultBox.classList.add('search-result-show');    
+            }
         })
         searchInput.addEventListener("focusout",function(){
-            console.log("unclicked");
-            searchResultBox.classList.remove('search-result-show');
+            if(tagNum !== 0){
+                console.log("unclicked");
+                searchResultBox.classList.add('search-result-mobile');    
+                searchResultBox.classList.remove('search-result-show');    
+            }
         })
     }
     function searchBoxCounter(num){

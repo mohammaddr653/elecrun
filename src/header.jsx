@@ -104,11 +104,28 @@ const Header = () => {
                         </div>
                     </div>
                     <div className="w-100 menu-bottom bg-dark m-0">
-                        <Search tagsNum={0}></Search>
+                        <div className='w-50'>
+                            <Search tagsNum={0}></Search>
+                        </div>
                     </div>
                 </div>
                 <div className="mobile-menu d-md-none d-flex">
-                    s
+                    <div className='image'>
+                        <img src="" alt="" />
+                    </div>
+                    <hr />
+                    <div className='list w-100 mt-3'>
+                        <Search tagsNum={1}></Search>
+                        <ul className='p-0 m-0 w-100'>
+                            {headerCon ? headerCon.map((item,index)=>{
+                                return(
+                                    <Link key={index} to={item.href}>
+                                        <li>{item.title}</li>
+                                    </Link>    
+                                )
+                            }) : "لیستی وجود ندارد"}
+                        </ul>
+                    </div>
                 </div>
                 <div className="dark-face" onClick={function(){
                     let mobileMenu=document.getElementsByClassName("mobile-menu")[0];
@@ -117,10 +134,15 @@ const Header = () => {
                     bgDark.classList.remove("show");
                 }}></div>
                 <div className="menu-bottom-dark-face" onClick={function(){
+                    let headerContainer=document.getElementById("header-container");
                     let menuBottom=document.getElementsByClassName("menu-bottom")[0];
                     let bgDark=document.getElementsByClassName("menu-bottom-dark-face")[0];
                     menuBottom.classList.remove("open");
                     bgDark.classList.remove("show");
+                    var st = window.pageYOffset || document.documentElement.scrollTop;
+                    if(st===0){
+                        headerContainer.classList.remove("header-container-change");
+                    }
                 }}></div>
 
             </div>
