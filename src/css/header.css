@@ -5,7 +5,6 @@ div#header-container{
     top: 0;
     transition: all .3s;
     z-index: 3;
-    height: 70px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -16,8 +15,25 @@ div#header-container.header-container-change{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.06);
 
 }
-div#header-container>div{
+div#header-container>div>div.menu-top{
     /* background-color: yellow; */
+    padding: 10px 20px;
+    height: 70px;
+
+}
+div#header-container>div>div.menu-bottom{
+    /* height: 0; */
+    display: none;
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
+}
+div#header-container>div>div.menu-bottom.open{
+    /* height: calc-size(auto); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
     padding: 10px 20px;
 }
 div#header-container div.menu-right{
@@ -135,6 +151,32 @@ div#header-container>div.dark-face{
 div#header-container>div.dark-face.show{
     display: block;
     transition: all .3s ease-out;
+}
+div#header-container>div.menu-bottom-dark-face{
+    background-color: rgba(0, 0, 0, 0);
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    display: none;
+    z-index: 0;
+    transition: all .3s ease-out;
+}
+div#header-container>div.menu-bottom-dark-face.show{
+    display: block;
+    transition: all .3s ease-out;
+
+}
 
 
+/* md */
+@media only screen and (max-width: 768px) {    
+    div#header-container>div>div.menu-bottom.open{
+        /* height: calc-size(auto); */
+        display: none;
+    }        
+    div#header-container>div.menu-bottom-dark-face.show{
+        display: none;
+    }
+    
 }
