@@ -77,10 +77,21 @@ div#header-container div.menu-right nav>ul{
     font-weight: 300;
     font-size: 14px;
 }
-div#header-container div.menu-right nav>ul>a{
+div#header-container div.menu-right nav>ul>li{
     position: relative;
     /* background-color: red; */
     height: 100%;
+    padding: 0;
+    z-index: 2;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+div#header-container div.menu-right nav>ul>li>a{
+
+    height: 100%;
+    /* background-color: yellow; */
     padding: 0;
     padding-right: 10px;
     padding-left: 40px;
@@ -97,16 +108,16 @@ div#header-container div.menu-right nav>ul div.second-class-menu{
     display: none;
     position: absolute;
     top: 95%;
-    right: -20px;
+    right: -100%;
     /* width:; */
     /* height: 300px; */
     border-radius: 0 5px 5px 0;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 div#header-container div.menu-right nav>ul div.second-class-menu-container{
 
     position: relative;
-    height: fit-content;
+    height: 100%;
     /* width: 300px; */
     /* background-color: red; */
 
@@ -117,6 +128,8 @@ div#header-container div.menu-right nav>ul div.second-class-menu>div.second-clas
     display: flex;
     padding: 0;
     margin: 0;
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
     width: max-content;
     /* min-width: max-content; */
     /* height: 300px; */
@@ -127,31 +140,160 @@ div#header-container div.menu-right nav>ul div.second-class-menu>div.second-clas
     list-style: none;
 
 }
-div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a{
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>li>a{
     width: 100%;
     /* background-color: red; */
     color: #333;
     font-family: 'iransans';
     font-size: 13px;
+    padding: 20px 30px;
     font-weight: 300;
 
 }
-div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a>li{
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>li{
     display: flex;
     flex-wrap: nowrap;
-    padding: 20px 30px;
+    /* background-color: green; */
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a>li:hover{
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>li:hover{
     background-color: whitesmoke;
 }
-div#header-container div.menu-right nav>ul>a:hover>li>div.second-class-menu{
+div#header-container div.menu-right nav>ul>li:hover>div.second-class-menu{
     display: block;
 }
-div#header-container div.menu-right nav>ul>a{
+div#header-container div.menu-right nav>ul>li>a:hover~div.second-class-menu>div.second-class-menu-container>ul>li:nth-child(1){
+    background-color: whitesmoke;
+}
+
+
+
+
+div#header-container div.menu-right nav>ul div.third-class-menu{
+
+    background-color: white;
+    box-shadow: 0 0 2px .5px rgb(212, 212, 212);
+    padding-left: 10px;
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 100%;
+    width: max-content;
+    min-width: 500px;
+    /* max-width: 300px; */
+    /* max-height: 100px; */
+    /* width:; */
+    height: 100%;
+    border-radius: 5px 0 0 5px;
+    padding: 20px;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: start;
+    /* overflow: hidden; */
+
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul{
+    background-color: white;
+    height: fit-content;
+    /* display: flex; */
+    list-style: none;
+    padding: 0;
+    /* column-count:calc(height/500px); */
+    /* column-width: 200px; */
+    column-gap: 40px;
+
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>img{
+
+    aspect-ratio: 1/1;
+    /* width: 300px; */
+    height: 50%;
+    object-fit: cover;
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul>li{
+    margin: 0;
+    margin-bottom: 20px;
+    /* background-color: red; */
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul>li::before{
+    content: "";
+    width: 2px;
+    height: 1px;
+    background-color: red;
+    border: 2px solid red;
+    margin-left: 5px;
+    border-radius: 30px;
+
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul>li>a{
+    color: #333;
+    /* padding-bottom: 10px; */
+
+}
+
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>li:hover div.third-class-menu{
+    display: flex;
+}
+div#header-container div.menu-right nav>ul>li>a:hover~div.second-class-menu>div.second-class-menu-container>ul>li:nth-child(1) div.third-class-menu{
+    display: flex;
+
+
+}
+
+
+
+
+div#header-container div.menu-right nav>ul div.forth-class-menu{
+    /* background-color: green; */
+    /* padding: 20px; */
+
+}
+div#header-container div.menu-right nav>ul div.forth-class-menu>ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+}
+div#header-container div.menu-right nav>ul div.forth-class-menu>ul>li{
+
+        /* padding: 5px; */
+        /* margin: 10px 0; */
+        font-weight: 200;
+        margin: 8px 0;
+
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul>li>div.forth-class-menu>ul>li:first-child{
+    padding-top: 10px;
+
+}
+div#header-container div.menu-right nav>ul div.third-class-menu>ul>li>div.forth-class-menu>ul>li:last-child{
+    /* padding-bottom: 20px; */
+/* background-color: red; */
+
+
+
+
+
+
+
+
+
+}
+div#header-container div.menu-right nav>ul div.forth-class-menu>ul>li>a{
+    color: #444;
+    font-size: 14px;
+}
+
+
+
+
+
+
+div#header-container div.menu-right nav>ul>li>a{
     color: #444;
 
 }
@@ -287,6 +429,27 @@ div#header-container>div.menu-bottom-dark-face.show{
 }
 
 
+
+
+@media only screen and (max-width: 800px) {    
+
+    div#header-container div.menu-right nav>ul div.second-class-menu{
+
+        background-color: white;
+        box-shadow: 0 0 2px .5px rgb(212, 212, 212);
+    
+        display: none;
+        position: absolute;
+        top: 95%;
+        right: -100%;
+        /* width:; */
+        /* height: 300px; */
+        border-radius: 0 5px 5px 0;
+        /* overflow: hidden; */
+    }
+    
+
+}
 /* md */
 @media only screen and (max-width: 768px) {    
     div#header-container>div>div.menu-bottom.open{
@@ -296,5 +459,6 @@ div#header-container>div.menu-bottom-dark-face.show{
     /* div#header-container>div.menu-bottom-dark-face.show{
         display: none;
     } */
+    
     
 }

@@ -1,0 +1,112 @@
+
+[
+    {
+        "href": "https://digikala.com",
+        "title": "خودرو های تیپ 1",
+        "tag":"car-series-a-tip-1",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 2",
+        "tag":"car-series-a-tip-2",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 3",
+        "tag":"car-series-a-tip-3",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 4",
+        "tag":"car-series-a-tip-4",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 5",
+        "tag":"car-series-a-tip-5",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 6",
+        "tag":"car-series-a-tip-6",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 7",
+        "tag":"car-series-a-tip-7",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 8",
+        "tag":"car-series-a-tip-8",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 9",
+        "tag":"car-series-a-tip-9",
+        "mother":"brand-a"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 10",
+        "tag":"car-series-a-tip-10",
+        "mother":"brand-a"
+    },
+
+
+
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 1",
+        "tag":"car-series-b-tip-1",
+        "mother":"brand-b"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 2",
+        "tag":"car-series-b-tip-2",
+        "mother":"brand-b"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 3",
+        "tag":"car-series-b-tip-3",
+        "mother":"brand-b"
+    },
+
+
+
+
+
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 1",
+        "tag":"car-series-c-tip-1",
+        "mother":"brand-c"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 2",
+        "tag":"car-series-c-tip-2",
+        "mother":"brand-c"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های تیپ 3",
+        "tag":"car-series-c-tip-3",
+        "mother":"brand-c"
+    }
+
+
+
+
+]
+

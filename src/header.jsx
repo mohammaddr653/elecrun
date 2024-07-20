@@ -11,6 +11,9 @@ import { click } from '@testing-library/user-event/dist/click';
 const Header = () => {
     const[firstClassMenu,setFirstClassMenu]=useState([]);
     const[secondClassMenu,setSecondClassMenu]=useState([]);
+    const[thirdClassMenu,setThirdClassMenu]=useState([]);
+    const[forthClassMenu,setForthClassMenu]=useState([]);
+    const[menuImg,setMenuImg]=useState("../images/5.jpg");
 
 
 
@@ -25,13 +28,20 @@ const Header = () => {
             const response = await axios.get("../second-class-menu.json");
             setSecondClassMenu(response.data);
         };
-        // async function getFirstClassData(){
-        //     const response = await axios.get("../first-class-menu.json");
-        //     setFirstClassMenu(response.data);
-        // };
+        async function getThirdClassData(){
+            const response = await axios.get("../third-class-menu.json");
+            setThirdClassMenu(response.data);
+        };
+        async function getForthClassData(){
+            const response = await axios.get("../forth-class-menu.json");
+            setForthClassMenu(response.data);
+        };
+
 
         getFirstClassData();
         getSecondClassData();
+        getThirdClassData();
+        getForthClassData();
     },[]);
 
 
@@ -62,6 +72,34 @@ const Header = () => {
         // toggleMobileMenu();
     },[])
 
+    function checkThirdClass(e){
+        console.log(e.target.parentElement);
+        // document.querySelector
+        let div=e.target.parentElement.querySelector("div.third-class-menu");
+        let ul=e.target.parentElement.querySelector("div.third-class-menu>ul");
+
+        if(div){
+            //"چهل تا به ازای پدینگ که در استایل داده بودیم کم کردم"
+            let divH=div.offsetHeight-40;
+            let ulH=ul.offsetHeight;
+            console.log("div height : ")
+            console.log(divH);
+            console.log("ul height : ")
+            console.log(ulH);
+            // ul.offsetHeight=200
+            if(ulH>=divH){
+                let divide=Math.trunc(ulH/divH);
+                console.log(divide)
+                ul.style.columnCount=divide;
+                if(ulH>=divH){
+                    divide +=1;
+                    ul.style.columnCount=divide;
+                }
+
+            }
+        }
+    }
+
     return ( 
         <header>
             <div id="header-container" className='container-fluid p-0'>
@@ -78,30 +116,74 @@ const Header = () => {
                                     <ul>
                                         {firstClassMenu ? firstClassMenu.map((item,index)=>{
                                             return(
-                                                <Link key={index} to={item.href}>
-                                                    <li>
+                                                <li key={index}>
+                                                    <Link to={item.href} onMouseEnter={function(e){
+                                                        checkThirdClass(e);
+                                                    }}>
                                                         {item.title}
-                                                        {item.hasChild && secondClassMenu ? 
-                                                            <div className='second-class-menu'>
-                                                                <div className='second-class-menu-container'>
-                                                                    <ul>
-                                                                        {secondClassMenu.map((secondItem,secondIndex)=>{
-                                                                            if(secondItem.mother===item.tag){
-                                                                                return(
-                                                                                    <Link key={secondIndex} to={secondItem.href}>
-                                                                                        <li>
-                                                                                            {secondItem.title}
-                                                                                        </li>
+                                                    </Link>
+                                                    {item.hasChild && secondClassMenu ? 
+                                                        <div className='second-class-menu'>
+                                                            <div className='second-class-menu-container'>
+                                                                <ul>
+                                                                    {secondClassMenu.map((secondItem,secondIndex)=>{
+                                                                        if(secondItem.mother===item.tag){
+                                                                            return(
+                                                                                <li key={secondIndex} onMouseEnter={function(e){
+                                                                                    checkThirdClass(e);
+                                                                                }}>
+                                                                                    <Link to={secondItem.href}>
+                                                                                        {secondItem.title}
                                                                                     </Link>
-                                                                                )    
-                                                                            }
-                                                                        })}
-                                                                    </ul>
-                                                                </div>
+                                                                                    {secondItem.hasChild && thirdClassMenu ? 
+                                                                                        <div className='third-class-menu'>
+                                                                                            <ul>
+                                                                                                {thirdClassMenu.map((thirdItem,thirdIndex)=>{
+                                                                                                    if(thirdItem.mother===secondItem.tag){
+                                                                                                        return(
+                                                                                                            <li key={thirdIndex} onMouseEnter={function(){
+                                                                                                                setMenuImg(thirdItem.img);
+                                                                                                                console.log(menuImg);
+                                                                                                            }}>
+                                                                                                                <Link to={thirdItem.href}>
+                                                                                                                    {thirdItem.title}
+                                                                                                                </Link>
+                                                                                                                {thirdItem.hasChild && forthClassMenu ? 
+                                                                                                                    <div className='forth-class-menu'>
+                                                                                                                        <ul>
+                                                                                                                            {forthClassMenu.map((forthItem,forthIndex)=>{
+                                                                                                                                if(forthItem.mother===thirdItem.tag){
+                                                                                                                                    return(
+                                                                                                                                        <li key={forthIndex}>
+                                                                                                                                            <Link to={forthItem.href}>
+                                                                                                                                                {forthItem.title}
+                                                                                                                                            </Link>
+                                                                                                                                        </li>
+                                                                                                                                    )    
+                                                                                                                                }else{return null}
+                                                                                                                            })}
+                                                                                                                        </ul>
+                                                                                                                    </div>
+                                                                                                                : null}
+                                                                                                            </li>
+                                                                                                        )    
+                                                                                                    }else{return null}
+                                                                                                })}
+                                                                                            </ul>
+                                                                                            <img src={menuImg} alt="" />
+                                                                                        </div>
+                                                                                    : null}
+                                                                                </li>
+                                                                            )    
+                                                                        }else{
+                                                                            return null
+                                                                        }
+                                                                    })}
+                                                                </ul>
                                                             </div>
-                                                        : null}
-                                                    </li>
-                                                </Link>    
+                                                        </div>
+                                                    : null}
+                                                </li>
                                             )
                                         }) : null}
                                     </ul>
