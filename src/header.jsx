@@ -9,33 +9,46 @@ import { Link } from 'react-router-dom';
 import { click } from '@testing-library/user-event/dist/click';
 
 const Header = () => {
-    const[headerCon,setHeaderCon]=useState([]);
+    const[firstClassMenu,setFirstClassMenu]=useState([]);
+    const[secondClassMenu,setSecondClassMenu]=useState([]);
+
+
 
 
 
     useEffect(() => {
-        async function getData(){
-            const response = await axios.get("../headerMenu.json");
-            setHeaderCon(response.data);
+        async function getFirstClassData(){
+            const response = await axios.get("../first-class-menu.json");
+            setFirstClassMenu(response.data);
         };
-        getData();
+        async function getSecondClassData(){
+            const response = await axios.get("../second-class-menu.json");
+            setSecondClassMenu(response.data);
+        };
+        // async function getFirstClassData(){
+        //     const response = await axios.get("../first-class-menu.json");
+        //     setFirstClassMenu(response.data);
+        // };
+
+        getFirstClassData();
+        getSecondClassData();
     },[]);
 
 
     function setScrollOptions(){
-        var headerContainer=document.getElementById("header-container");
+        var firstClassMenutainer=document.getElementById("header-container");
         let menuBottom=document.getElementsByClassName("menu-bottom")[0];
         var lastScrollTop = 0;
     
         window.addEventListener("scroll", function(){
         var st = window.pageYOffset || document.documentElement.scrollTop;
         if (st > lastScrollTop) {
-            if(!(headerContainer.classList.contains==="header-container-change")){
-                headerContainer.classList.add("header-container-change");
+            if(!(firstClassMenutainer.classList.contains==="header-container-change")){
+                firstClassMenutainer.classList.add("header-container-change");
             } 
         } else if (st===0) {
             if(!menuBottom.classList.contains("open")){
-                headerContainer.classList.remove("header-container-change");
+                firstClassMenutainer.classList.remove("header-container-change");
             }
             lastScrollTop=st;
         }
@@ -60,13 +73,34 @@ const Header = () => {
                                 
                                 </Link>
                             </div>
-                            <div className='d-none d-md-flex'>
-                                <nav>
+                            <div className='d-none d-md-flex h-100'>
+                                <nav className='h-100'>
                                     <ul>
-                                        {headerCon ? headerCon.map((item,index)=>{
+                                        {firstClassMenu ? firstClassMenu.map((item,index)=>{
                                             return(
                                                 <Link key={index} to={item.href}>
-                                                    <li>{item.title}</li>
+                                                    <li>
+                                                        {item.title}
+                                                        {item.hasChild && secondClassMenu ? 
+                                                            <div className='second-class-menu'>
+                                                                <div className='second-class-menu-container'>
+                                                                    <ul>
+                                                                        {secondClassMenu.map((secondItem,secondIndex)=>{
+                                                                            if(secondItem.mother===item.tag){
+                                                                                return(
+                                                                                    <Link key={secondIndex} to={secondItem.href}>
+                                                                                        <li>
+                                                                                            {secondItem.title}
+                                                                                        </li>
+                                                                                    </Link>
+                                                                                )    
+                                                                            }
+                                                                        })}
+                                                                    </ul>
+                                                                </div>
+                                                            </div>
+                                                        : null}
+                                                    </li>
                                                 </Link>    
                                             )
                                         }) : null}
@@ -77,8 +111,8 @@ const Header = () => {
                                     menuBottom.classList.toggle("open");
                                     let bgDark=document.getElementsByClassName("menu-bottom-dark-face")[0];
                                     bgDark.classList.add("show");
-                                    let headerContainer=document.getElementById("header-container");
-                                    headerContainer.classList.add("header-container-change");
+                                    let firstClassMenutainer=document.getElementById("header-container");
+                                    firstClassMenutainer.classList.add("header-container-change");
 
                                 }}>
                                     <span>
@@ -117,7 +151,7 @@ const Header = () => {
                     <div className='list w-100 mt-3'>
                         <Search tagsNum={1}></Search>
                         <ul className='p-0 m-0 w-100'>
-                            {headerCon ? headerCon.map((item,index)=>{
+                            {firstClassMenu ? firstClassMenu.map((item,index)=>{
                                 return(
                                     <Link key={index} to={item.href}>
                                         <li>{item.title}</li>
@@ -134,14 +168,14 @@ const Header = () => {
                     bgDark.classList.remove("show");
                 }}></div>
                 <div className="menu-bottom-dark-face" onClick={function(){
-                    let headerContainer=document.getElementById("header-container");
+                    let firstClassMenutainer=document.getElementById("header-container");
                     let menuBottom=document.getElementsByClassName("menu-bottom")[0];
                     let bgDark=document.getElementsByClassName("menu-bottom-dark-face")[0];
                     menuBottom.classList.remove("open");
                     bgDark.classList.remove("show");
                     var st = window.pageYOffset || document.documentElement.scrollTop;
                     if(st===0){
-                        headerContainer.classList.remove("header-container-change");
+                        firstClassMenutainer.classList.remove("header-container-change");
                     }
                 }}></div>
 

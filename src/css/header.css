@@ -17,8 +17,8 @@ div#header-container.header-container-change{
 }
 div#header-container>div>div.menu-top{
     /* background-color: yellow; */
-    padding: 10px 20px;
-    height: 70px;
+    padding: 0px 20px;
+    height: 50px;
 
 }
 div#header-container>div>div.menu-bottom{
@@ -42,6 +42,7 @@ div#header-container div.menu-right{
     justify-content: start;
     align-items: center;
     gap: 100px;
+    height: 100%;
 }
 div#header-container div.menu-right>div.image{
     background-color: #444;
@@ -65,8 +66,9 @@ div#header-container div.menu-right nav>ul{
     flex-direction: row;
     justify-content: start;
     align-items: center;
-    gap: 30px;
-    /* background-color: #444; */
+    gap: 10px;
+    /* background-color: rgba(0, 0, 255, 0.423); */
+    height: 100%;
     text-decoration: none;
     list-style: none;
     margin: 0;
@@ -74,6 +76,80 @@ div#header-container div.menu-right nav>ul{
     font-family: 'iransans';
     font-weight: 300;
     font-size: 14px;
+}
+div#header-container div.menu-right nav>ul>a{
+    position: relative;
+    /* background-color: red; */
+    height: 100%;
+    padding: 0;
+    padding-right: 10px;
+    padding-left: 40px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+}
+div#header-container div.menu-right nav>ul div.second-class-menu{
+
+    background-color: white;
+    box-shadow: 0 0 2px .5px rgb(212, 212, 212);
+
+    display: none;
+    position: absolute;
+    top: 95%;
+    right: -20px;
+    /* width:; */
+    /* height: 300px; */
+    border-radius: 0 5px 5px 0;
+    overflow: hidden;
+}
+div#header-container div.menu-right nav>ul div.second-class-menu-container{
+
+    position: relative;
+    height: fit-content;
+    /* width: 300px; */
+    /* background-color: red; */
+
+}
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul{
+    /* position: relative; */
+    /* background-color: yellow; */
+    display: flex;
+    padding: 0;
+    margin: 0;
+    width: fit-content;
+    /* min-width: max-content; */
+    /* height: 300px; */
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    /* gap: 15px; */
+    list-style: none;
+
+}
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a{
+    width: 100%;
+    /* background-color: red; */
+    color: #333;
+    font-family: 'iransans';
+    font-size: 13px;
+    font-weight: 300;
+
+}
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a>li{
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 20px 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>a>li:hover{
+    background-color: whitesmoke;
+}
+div#header-container div.menu-right nav>ul>a:hover>li>div.second-class-menu{
+    display: block;
 }
 div#header-container div.menu-right nav>ul>a{
     color: #444;
@@ -170,6 +246,7 @@ div#header-container>div.mobile-menu>div.list>ul{
     font-family: "iransans";
     font-weight: 300;
     font-size: 18px;
+    /* background-color: red; */
     /* color: #444; */
 
 }

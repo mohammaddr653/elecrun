@@ -1,0 +1,41 @@
+
+[
+    {
+        "href": "#",
+        "title": "برند A",
+        "tag":"brand-a",
+        "mother":"cars-group-1"
+    },
+    {
+        "href": "#",
+        "title": "برند B",
+        "tag":"brand-b",
+        "mother":"cars-group-1"
+    },
+    {
+        "href": "#",
+        "title": "برند C",
+        "tag":"brand-c",
+        "mother":"cars-group-1"
+    },
+    {
+        "href": "#",
+        "title": "برند D",
+        "tag":"brand-d",
+        "mother":"cars-group-1"
+    },
+    {
+        "href": "#",
+        "title": "برند E",
+        "tag":"brand-e",
+        "mother":"cars-group-1"
+    },
+    {
+        "href": "#",
+        "title": "برند F",
+        "tag":"brand-f",
+        "mother":"cars-group-1"
+    }
+
+]
+

@@ -1,0 +1,52 @@
+
+[
+    {
+        "href": "#",
+        "title": "خودرو های نوع 1",
+        "tag":"cars-group-1",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 2",
+        "tag":"cars-group-2",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 3",
+        "tag":"cars-group-3",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 4",
+        "tag":"cars-group-4",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 5",
+        "tag":"cars-group-5",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "جدیدترین اخبار",
+        "tag":"last-news",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "صنعت خودرو",
+        "tag":"car-industry",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "فناوری",
+        "tag":"tech",
+        "mother":"news"
+    }  
+]
+
