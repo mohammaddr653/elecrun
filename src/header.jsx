@@ -72,33 +72,66 @@ const Header = () => {
         // toggleMobileMenu();
     },[])
 
-    function checkThirdClass(e){
+    function checkThirdClass(e,handler){
         console.log(e.target.parentElement);
         // document.querySelector
+        let secondClassUl;
+        if(handler==="firstClass"){
+            secondClassUl=e.target.parentElement.querySelector("div.second-class-menu>div.second-class-menu-container>ul");
+        }
+        if(handler==="secondClass"){
+            secondClassUl=e.target.parentElement.parentElement;
+        }
+
         let div=e.target.parentElement.querySelector("div.third-class-menu");
         let ul=e.target.parentElement.querySelector("div.third-class-menu>ul");
-
-        if(div){
+        console.log(secondClassUl);
+        console.log(div);
+        if(div && div.attributes.sizechecked.value==="false"){
+            // let sizeChecked=div.attributes.sizechecked.value;
             //"چهل تا به ازای پدینگ که در استایل داده بودیم کم کردم"
             let divH=div.offsetHeight-40;
             let ulH=ul.offsetHeight;
             console.log("div height : ")
             console.log(divH);
+            console.log(div.scrollHeight);
+
             console.log("ul height : ")
             console.log(ulH);
-            // ul.offsetHeight=200
+            console.log(ul.clientHeight)
             if(ulH>=divH){
-                let divide=Math.trunc(ulH/divH);
+                let divide=Math.trunc(ulH/divH+1);
                 console.log(divide)
                 ul.style.columnCount=divide;
-                if(ulH>=divH){
-                    divide +=1;
-                    ul.style.columnCount=divide;
-                }
-
             }
+            div.attributes.sizechecked.value="true";
+        }
+        if(div && secondClassUl){
+            secondClassUl.style.height="100%";
+            let divH=div.offsetHeight;
+            let secondClassUlH=secondClassUl.offsetHeight;
+            console.log("divH is :")
+            console.log(divH);
+            console.log("secondClassUlH is :")
+            console.log(secondClassUlH);
+            if(divH>=secondClassUlH){
+                secondClassUl.style.height=divH+"px";
+            }
+
+        }else if(secondClassUl){
+            secondClassUl.style.height="100%";
         }
     }
+
+    // function checkThirdClassHeight(e){
+    //     let secondClassUl=e.target.parentElement.querySelector("div.second-class-menu-container>ul");
+    //     let div=e.target.parentElement.querySelector("div.third-class-menu");
+    //     if(div && secondClassUl){
+    //         secondClassUl.style.height="100px";
+
+    //     }
+
+    // }
 
     return ( 
         <header>
@@ -118,7 +151,7 @@ const Header = () => {
                                             return(
                                                 <li key={index}>
                                                     <Link to={item.href} onMouseEnter={function(e){
-                                                        checkThirdClass(e);
+                                                        checkThirdClass(e,"firstClass");
                                                     }}>
                                                         {item.title}
                                                     </Link>
@@ -130,13 +163,13 @@ const Header = () => {
                                                                         if(secondItem.mother===item.tag){
                                                                             return(
                                                                                 <li key={secondIndex} onMouseEnter={function(e){
-                                                                                    checkThirdClass(e);
+                                                                                    checkThirdClass(e,"secondClass");
                                                                                 }}>
                                                                                     <Link to={secondItem.href}>
                                                                                         {secondItem.title}
                                                                                     </Link>
                                                                                     {secondItem.hasChild && thirdClassMenu ? 
-                                                                                        <div className='third-class-menu'>
+                                                                                        <div className='third-class-menu' sizechecked="false">
                                                                                             <ul>
                                                                                                 {thirdClassMenu.map((thirdItem,thirdIndex)=>{
                                                                                                     if(thirdItem.mother===secondItem.tag){

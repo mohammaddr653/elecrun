@@ -24,37 +24,6 @@
     },
     {
         "href": "#",
-        "title": "خودرو های نوع 4",
-        "tag":"cars-group-4",
-        "mother":"articles"
-    },
-    {
-        "href": "#",
-        "title": "خودرو های نوع 5",
-        "tag":"cars-group-5",
-        "mother":"articles"
-    },
-    {
-        "href": "#",
-        "title": "خودرو های نوع 6",
-        "tag":"cars-group-6",
-        "mother":"articles"
-    },
-    {
-        "href": "#",
-        "title": "خودرو های نوع 7",
-        "tag":"cars-group-7",
-        "mother":"articles"
-    },
-    {
-        "href": "#",
-        "title": "خودرو های نوع 8",
-        "tag":"cars-group-8",
-        "mother":"articles"
-    },
-
-    {
-        "href": "#",
         "title": "جدیدترین اخبار",
         "tag":"last-news",
         "mother":"news"

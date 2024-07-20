@@ -118,6 +118,7 @@ div#header-container div.menu-right nav>ul div.second-class-menu-container{
 
     position: relative;
     height: 100%;
+    /* background-color: red; */
     /* width: 300px; */
     /* background-color: red; */
 
@@ -130,6 +131,8 @@ div#header-container div.menu-right nav>ul div.second-class-menu>div.second-clas
     margin: 0;
     border-radius: 0 5px 5px 0;
     overflow: hidden;
+    /* height: 500px; */
+    height: 100%;
     width: max-content;
     /* min-width: max-content; */
     /* height: 300px; */
@@ -187,6 +190,7 @@ div#header-container div.menu-right nav>ul div.third-class-menu{
     /* max-height: 100px; */
     /* width:; */
     height: 100%;
+    min-height: 500px;
     border-radius: 5px 0 0 5px;
     padding: 20px;
     flex-direction: row;
