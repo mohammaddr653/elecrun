@@ -87,6 +87,7 @@ const Header = () => {
         let ul=e.target.parentElement.querySelector("div.third-class-menu>ul");
         console.log(secondClassUl);
         console.log(div);
+        // checkMenuPos(e,div,handler);
         if(div && div.attributes.sizechecked.value==="false"){
             // let sizeChecked=div.attributes.sizechecked.value;
             //"چهل تا به ازای پدینگ که در استایل داده بودیم کم کردم"
@@ -94,8 +95,6 @@ const Header = () => {
             let ulH=ul.offsetHeight;
             console.log("div height : ")
             console.log(divH);
-            console.log(div.scrollHeight);
-
             console.log("ul height : ")
             console.log(ulH);
             console.log(ul.clientHeight)
@@ -110,10 +109,6 @@ const Header = () => {
             secondClassUl.style.height="100%";
             let divH=div.offsetHeight;
             let secondClassUlH=secondClassUl.offsetHeight;
-            console.log("divH is :")
-            console.log(divH);
-            console.log("secondClassUlH is :")
-            console.log(secondClassUlH);
             if(divH>=secondClassUlH){
                 secondClassUl.style.height=divH+"px";
             }
@@ -122,6 +117,26 @@ const Header = () => {
             secondClassUl.style.height="100%";
         }
     }
+    // function checkMenuPos(e,div,handler){
+    //     console.log("third div is : ")
+    //     console.log(div);
+    //     let secondClass;
+    //     if(handler==="firstClass"){
+    //         secondClass=e.target.parentElement.querySelector("div.second-class-menu");
+    //     }
+    //     if(handler==="secondClass"){
+    //         secondClass=e.target.parentElement.parentElement.parentElement.parentElement;
+    //     }
+    //     console.log("secondClass is : ")
+    //     console.log(secondClass);
+
+    //     if(div && secondClass){
+    //         let divLeft=div.getBoundingClientRect().left;
+    //         if(divLeft<0){
+    //             secondClass.style.right=divLeft+"px";
+    //         }
+    //     }
+    // }
 
     // function checkThirdClassHeight(e){
     //     let secondClassUl=e.target.parentElement.querySelector("div.second-class-menu-container>ul");
@@ -203,7 +218,7 @@ const Header = () => {
                                                                                                     }else{return null}
                                                                                                 })}
                                                                                             </ul>
-                                                                                            <img src={menuImg} alt="" />
+                                                                                            <img src={menuImg} alt="" className='d-none d-xl-flex' />
                                                                                         </div>
                                                                                     : null}
                                                                                 </li>
