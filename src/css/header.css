@@ -133,6 +133,8 @@ div#header-container div.menu-right nav>ul div.second-class-menu>div.second-clas
     overflow: hidden;
     /* height: 500px; */
     height: 100%;
+    max-height: calc(100vh - 70px);
+    overflow-y: scroll;
     width: max-content;
     /* min-width: max-content; */
     /* height: 300px; */
@@ -141,6 +143,10 @@ div#header-container div.menu-right nav>ul div.second-class-menu>div.second-clas
     align-items: start;
     /* gap: 15px; */
     list-style: none;
+
+}
+div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul::-webkit-scrollbar{
+    display: none;
 
 }
 div#header-container div.menu-right nav>ul div.second-class-menu>div.second-class-menu-container>ul>li>a{
@@ -460,7 +466,61 @@ div#header-container>div.menu-bottom-dark-face.show{
         align-items: start;
     
     }
+    div#header-container div.menu-right nav>ul div.third-class-menu>ul{
+        background-color: white;
+        height: fit-content;
+        /* display: flex; */
+        list-style: none;
+        padding: 0;
+        /* max-width: 200px; */
+        /* background-color: yellow; */
+        overflow: scroll;
+        width: 100%;
+        /* width: max-content; */
+        /* column-count:calc(height/500px); */
+        /* column-width: 200px; */
+        column-count:2 !important;
+        column-gap: 0px;
+        height: 100%;
+
+    
+    }
+    div#header-container div.menu-right nav>ul div.third-class-menu>ul>li{
+        /* width: max-content; */
+        width: fit-content;
+        /* height: 500px; */
+
+    }
+    
         
+
+}
+
+
+
+@media only screen and (max-width: 928px) {    
+
+    div#header-container div.menu-right nav>ul div.third-class-menu{
+
+        background-color: white;
+        box-shadow: 0 0 2px .5px rgb(212, 212, 212);
+        padding-left: 10px;
+        display: none;
+        position: absolute;
+        top: 0;
+        right: 100%;
+        /* width: max-content; */
+        min-width: 400px;
+        height: 100%;
+        min-height: calc(100vh - 70px);
+        border-radius: 5px 0 0 5px;
+        padding: 20px;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 20px;
+        align-items: start;
+    
+    }        
 
 }
 

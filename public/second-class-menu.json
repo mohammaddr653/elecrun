@@ -24,6 +24,109 @@
     },
     {
         "href": "#",
+        "title": "خودرو های نوع 4",
+        "tag":"cars-group-4",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 5",
+        "tag":"cars-group-5",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 6",
+        "tag":"cars-group-6",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 7",
+        "tag":"cars-group-7",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 8",
+        "tag":"cars-group-8",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 9",
+        "tag":"cars-group-9",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 10",
+        "tag":"cars-group-10",
+        "mother":"articles"
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 11",
+        "tag":"cars-group-11",
+        "mother":"articles"
+    },
+
+
+    {
+        "href": "https://digikala.com",
+        "title": "خودرو های نوع 1",
+        "tag":"cars-group-1",
+        "mother":"shop",
+        "hasChild":true
+
+    },
+    {
+        "href": "#",
+        "title": "خودرو های نوع 2",
+        "tag":"cars-group-2",
+        "mother":"shop"
+    },
+
+
+
+    {
+        "href": "#",
+        "title": "جدیدترین اخبار",
+        "tag":"last-news",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "صنعت خودرو",
+        "tag":"car-industry",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "فناوری",
+        "tag":"tech",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "جدیدترین اخبار",
+        "tag":"last-news",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "صنعت خودرو",
+        "tag":"car-industry",
+        "mother":"news"
+    },
+    {
+        "href": "#",
+        "title": "فناوری",
+        "tag":"tech",
+        "mother":"news"
+    },
+    {
+        "href": "#",
         "title": "جدیدترین اخبار",
         "tag":"last-news",
         "mother":"news"
@@ -40,5 +143,7 @@
         "tag":"tech",
         "mother":"news"
     }  
+
+
 ]
 

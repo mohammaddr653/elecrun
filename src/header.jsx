@@ -106,14 +106,15 @@ const Header = () => {
             div.attributes.sizechecked.value="true";
         }
         if(div && secondClassUl){
-            secondClassUl.style.height="100%";
             let divH=div.offsetHeight;
             let secondClassUlH=secondClassUl.offsetHeight;
+            secondClassUl.style.height="100%";
             if(divH>=secondClassUlH){
                 secondClassUl.style.height=divH+"px";
             }
 
-        }else if(secondClassUl){
+        }
+        else if(secondClassUl){
             secondClassUl.style.height="100%";
         }
     }
