@@ -15,7 +15,6 @@ const Search = (props) => {
             let results;
             async function getData(){
                 const response = await axios.get("https://jsonplaceholder.typicode.com/users",);
-                console.log(response.data);
                 results=response.data;
             }
             getData();
@@ -32,7 +31,6 @@ const Search = (props) => {
                     }
                     
                 }
-                console.log(searchResults);
                 searchBoxCounter(searchResults.length);
                 setSearchData(searchResults);
             };
@@ -45,19 +43,16 @@ const Search = (props) => {
         let searchInput = document.querySelectorAll('div.search-container input.search-input')[tagNum];
         let searchResultBox = document.querySelectorAll('div.search-container div.search-result-box')[tagNum];
         if(tagNum !== 0){
-            console.log("unclicked");
             searchResultBox.classList.add('search-result-mobile');    
         }
     
         searchInput.addEventListener("focusin",function(){
             if(tagNum !== 0){
-                console.log("clicked");
                 searchResultBox.classList.add('search-result-show');    
             }
         })
         searchInput.addEventListener("focusout",function(){
             if(tagNum !== 0){
-                console.log("unclicked");
                 searchResultBox.classList.add('search-result-mobile');    
                 searchResultBox.classList.remove('search-result-show');    
             }
@@ -68,7 +63,6 @@ const Search = (props) => {
         let searchInput = document.querySelectorAll('div.search-container input.search-input')[tagNum];
         searchInput=searchInput.value;
         if(searchInput!==null && searchInput!==" " && searchInput!=="" && num===0){
-            console.log("jj");
             counter.innerHTML="نتیجه ای یافت نشد"
         }else if(num>0){
             counter.innerHTML=num+" نتیجه یافت شد";

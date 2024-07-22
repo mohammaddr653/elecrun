@@ -355,6 +355,7 @@ div#header-container>div.mobile-menu{
     background-color: white;
     height: 100vh;
     width: 90vw;
+    overflow: scroll;
     position: fixed;
     top: 0;
     left: -100vw;
@@ -363,8 +364,12 @@ div#header-container>div.mobile-menu{
     justify-content: start;
     align-items: center;
     z-index: 1;
-    padding: 20px;
+    padding: 40px;
     transition: left .3s ease-out;
+
+}
+div#header-container>div.mobile-menu::-webkit-scrollbar{
+    display: none;
 
 }
 div#header-container>div.mobile-menu.open{
@@ -373,8 +378,22 @@ div#header-container>div.mobile-menu.open{
     top: 0;
     left: 0;
     height: 100vh;
-    width: 90vw;
+    width: 100vw;
     /* gap: 20px; */
+}
+div#header-container>div.mobile-menu>div.close{
+    /* background-color: green; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+}
+div#header-container>div.mobile-menu>div.close svg{
+    width: 25px;
+    aspect-ratio: 1/1;
+    fill: #444;
+    
 }
 div#header-container>div.mobile-menu>div.image{
     aspect-ratio: 100/20;
@@ -396,7 +415,7 @@ div#header-container>div.mobile-menu>div.list>ul{
     flex-direction: column;
     justify-content: start;
     align-items: start;
-    gap: 15px;
+    gap: 5px;
     list-style: none;
     font-family: "iransans";
     font-weight: 300;
@@ -405,10 +424,244 @@ div#header-container>div.mobile-menu>div.list>ul{
     /* color: #444; */
 
 }
-div#header-container>div.mobile-menu>div.list>ul>a{
-
-    color: #444;
+div#header-container>div.mobile-menu>div.list>ul>li{
+    /* background-color: yellow; */
+    width: 100%;
+    /* position: relative; */
+    padding: 10px;
+    /* height: max-content; */
 }
+div#header-container>div.mobile-menu>div.list>ul>li>div.head{
+    /* background-color: pink; */
+}
+div#header-container>div.mobile-menu>div.list>ul>li>div.head>a>svg{
+aspect-ratio: 1/1;
+width: 20px;
+fill: #444;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li>div.head>a{
+    /* background-color: red; */
+    color: #444;
+    padding: 10px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    /* box-shadow: 0 0 2px .5px #999; */
+
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu{
+    background-color: white;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu::-webkit-scrollbar{
+    display: none;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>div.close-button{
+    /* background-color: red; */
+    width: 100%;
+    padding: 20px;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>div.close-button>span{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>div.close-button>span>svg{
+
+    aspect-ratio: 1/1;
+    width: 30px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>p{
+    /* background-color: red; */
+    padding: 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+
+}
+
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu.open{
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start;
+    align-items: start; */
+    gap: 20px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>ul{
+    list-style: none;
+    /* background-color: red; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>ul>li{
+    /* background-color: brown; */
+    width: 100%;
+    padding: 10px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>ul>li>div.head{
+    width: 100%;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>ul>li>div.head>a{
+    color: #333;
+    font-size: 15px;
+    /* background-color: red; */
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 5px;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-second-class-menu>ul>li>div.head>a>svg{
+
+    aspect-ratio: 1/1;
+    width: 20px;
+}
+
+
+
+/* start third class menu */
+
+
+
+
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu{
+    background-color: white;
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu::-webkit-scrollbar{
+    display: none;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>div.close-button{
+    /* background-color: red; */
+    width: 100%;
+    padding: 20px;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>div.close-button>span{
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: fit-content;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>div.close-button>span>svg{
+
+    aspect-ratio: 1/1;
+    width: 30px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>p{
+    /* background-color: red; */
+    padding: 0 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid black;
+    
+    
+}
+
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu.open{
+
+    display: flex;
+    flex-direction: column;
+    /* justify-content: start;
+    align-items: start; */
+    gap: 20px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul{
+    list-style: none;
+    /* background-color: red; */
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    gap: 5px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li{
+    /* background-color: brown; */
+    width: 100%;
+    padding: 10px;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li>a{
+
+    background-color: white;
+    padding: 10px;
+    display: flex;
+    color: #333;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li>a::before{
+    content: "";
+    margin-left: 5px;
+    border: 2px solid red;
+
+
+}
+
+
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li>div.mb-forth-class-menu>ul{
+    /* background-color: yellowgreen; */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 0 20px;
+    list-style: none;
+    gap: 10px;
+
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li>div.mb-forth-class-menu>ul>li{
+
+    /* background-color: orange; */
+    /* padding: 10px; */
+    width: 100%;
+}
+div#header-container>div.mobile-menu>div.list>ul>li div.mb-third-class-menu>ul>li>div.mb-forth-class-menu>ul>li>a{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    color: #333;
+    font-size: 14px;
+
+}
+
+
+
+
+
+/* finish third class menu */
+
+
+
+
 div#header-container>div.dark-face{
 
     background-color: rgba(0, 0, 0, 0.53);

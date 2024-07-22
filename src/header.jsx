@@ -73,7 +73,6 @@ const Header = () => {
     },[])
 
     function checkThirdClass(e,handler){
-        console.log(e.target.parentElement);
         // document.querySelector
         let secondClassUl;
         if(handler==="firstClass"){
@@ -85,22 +84,14 @@ const Header = () => {
 
         let div=e.target.parentElement.querySelector("div.third-class-menu");
         let ul=e.target.parentElement.querySelector("div.third-class-menu>ul");
-        console.log(secondClassUl);
-        console.log(div);
         // checkMenuPos(e,div,handler);
         if(div && div.attributes.sizechecked.value==="false"){
             // let sizeChecked=div.attributes.sizechecked.value;
             //"چهل تا به ازای پدینگ که در استایل داده بودیم کم کردم"
             let divH=div.offsetHeight-40;
             let ulH=ul.offsetHeight;
-            console.log("div height : ")
-            console.log(divH);
-            console.log("ul height : ")
-            console.log(ulH);
-            console.log(ul.clientHeight)
             if(ulH>=divH){
                 let divide=Math.trunc(ulH/divH+1);
-                console.log(divide)
                 ul.style.columnCount=divide;
             }
             div.attributes.sizechecked.value="true";
@@ -118,36 +109,6 @@ const Header = () => {
             secondClassUl.style.height="100%";
         }
     }
-    // function checkMenuPos(e,div,handler){
-    //     console.log("third div is : ")
-    //     console.log(div);
-    //     let secondClass;
-    //     if(handler==="firstClass"){
-    //         secondClass=e.target.parentElement.querySelector("div.second-class-menu");
-    //     }
-    //     if(handler==="secondClass"){
-    //         secondClass=e.target.parentElement.parentElement.parentElement.parentElement;
-    //     }
-    //     console.log("secondClass is : ")
-    //     console.log(secondClass);
-
-    //     if(div && secondClass){
-    //         let divLeft=div.getBoundingClientRect().left;
-    //         if(divLeft<0){
-    //             secondClass.style.right=divLeft+"px";
-    //         }
-    //     }
-    // }
-
-    // function checkThirdClassHeight(e){
-    //     let secondClassUl=e.target.parentElement.querySelector("div.second-class-menu-container>ul");
-    //     let div=e.target.parentElement.querySelector("div.third-class-menu");
-    //     if(div && secondClassUl){
-    //         secondClassUl.style.height="100px";
-
-    //     }
-
-    // }
 
     return ( 
         <header>
@@ -192,7 +153,6 @@ const Header = () => {
                                                                                                         return(
                                                                                                             <li key={thirdIndex} onMouseEnter={function(){
                                                                                                                 setMenuImg(thirdItem.img);
-                                                                                                                console.log(menuImg);
                                                                                                             }}>
                                                                                                                 <Link to={thirdItem.href}>
                                                                                                                     {thirdItem.title}
@@ -275,6 +235,18 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="mobile-menu d-md-none d-flex">
+                    <div className="close">
+                        <span className='p-1' onClick={function(){
+                            let mobileMenu=document.getElementsByClassName("mobile-menu")[0];
+                            let bgDark=document.getElementsByClassName("dark-face")[0];
+                            mobileMenu.classList.remove("open");
+                            bgDark.classList.remove("show");
+                        }}>
+                            <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x" viewBox="0 0 16 16">
+                                    <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                            </svg>
+                        </span>
+                    </div>
                     <div className='image'>
                         <img src="" alt="" />
                     </div>
@@ -284,9 +256,133 @@ const Header = () => {
                         <ul className='p-0 m-0 w-100'>
                             {firstClassMenu ? firstClassMenu.map((item,index)=>{
                                 return(
-                                    <Link key={index} to={item.href}>
-                                        <li>{item.title}</li>
-                                    </Link>    
+                                    <li key={index}>
+                                        <div className='head' onClick={function(e){
+                                            // حالت کشویی
+                                            let allLi=e.currentTarget.parentElement.parentElement.parentElement.querySelectorAll("ul>li");
+                                            let clickedLi=e.currentTarget.parentElement;
+                                            let clickedMbThird=clickedLi.querySelector("div.mb-second-class-menu");
+                                            for(let li of allLi){
+                                                let mbThird=li.querySelector("div.mb-second-class-menu");
+                                                if(mbThird && li !==clickedLi){
+                                                    mbThird.classList.remove("open");
+                                                }
+                                            }
+                                            if(clickedMbThird){
+                                                clickedMbThird.classList.toggle("open");
+                                            }
+                                        }}>
+                                            {/* اگر لینک است که به صفحه مورد نظر منتقل می شوید و اگر زیر منو دارد با کلیک روی لینک زیر منو باز می شود */}
+                                            <Link to={item.href}>
+                                                {item.title}
+                                                {item.hasChild && secondClassMenu ?
+                                                    <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                                                        <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+                                                    </svg>                                                
+                                                : null}
+                                            </Link>
+                                        </div>
+                                        {item.hasChild && secondClassMenu ?
+                                            <div className='mb-second-class-menu'>
+                                                <div className='close-button'>
+                                                    <span onClick={function(e){
+                                                        let openedMbSecond=e.currentTarget.parentElement.parentElement;
+                                                        if(openedMbSecond){
+                                                            openedMbSecond.classList.remove("open");
+                                                        }
+                                                    }}>
+                                                        <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x" viewBox="0 0 16 16">
+                                                            <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                                        </svg>
+                                                    </span>
+                                                </div>
+                                                <p>{item.title}</p>
+                                                <ul>
+                                                    {secondClassMenu.map((secondItem,secondIndex)=>{
+                                                        if(secondItem.mother===item.tag){
+                                                            return(
+                                                                <li key={secondIndex}>
+                                                                    <div className='head' onClick={function(e){
+                                                                        // حالت کشویی
+                                                                        let allLi=e.currentTarget.parentElement.parentElement.parentElement.querySelectorAll("ul>li");
+                                                                        let clickedLi=e.currentTarget.parentElement;
+                                                                        let clickedMbThird=clickedLi.querySelector("div.mb-third-class-menu");
+                                                                        for(let li of allLi){
+                                                                            let mbThird=li.querySelector("div.mb-third-class-menu");
+                                                                            if(mbThird && li !==clickedLi){
+                                                                                mbThird.classList.remove("open");
+                                                                            }
+                                                                        }
+                                                                        if(clickedMbThird){
+                                                                            clickedMbThird.classList.toggle("open");
+                                                                        }
+                                                                    }}>
+                                                                        {/* اگر لینک است که به صفحه مورد نظر منتقل می شوید و اگر زیر منو دارد با کلیک روی لینک زیر منو باز می شود */}
+                                                                        <Link to={secondItem.href}>
+                                                                            {secondItem.title}
+                                                                            {secondItem.hasChild && thirdClassMenu ?
+                                                                                <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-chevron-compact-down" viewBox="0 0 16 16">
+                                                                                    <path fillRule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+                                                                                </svg>                                                
+                                                                            : null}
+                                                                        </Link>
+                                                                    </div>
+                                                                    {secondItem.hasChild && thirdClassMenu ?
+                                                                        <div className="mb-third-class-menu">
+                                                                            <div className='close-button'>
+                                                                                <span onClick={function(e){
+                                                                                    let openedMbThird=e.currentTarget.parentElement.parentElement;
+                                                                                    if(openedMbThird){
+                                                                                        openedMbThird.classList.remove("open");
+                                                                                    }
+                                                                                }}>
+                                                                                    <svg xmlns="http://www.w3.org/2000/svg" className="bi bi-x" viewBox="0 0 16 16">
+                                                                                        <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708"/>
+                                                                                    </svg>
+                                                                                </span>
+                                                                            </div>
+                                                                            <p>{item.title} / {secondItem.title}</p>
+                                                                            <ul>
+                                                                                {thirdClassMenu.map((thirdItem,thirdIndex)=>{
+                                                                                    if(thirdItem.mother===secondItem.tag){
+                                                                                        return(
+                                                                                            <li key={thirdIndex}>
+                                                                                                <Link to={thirdItem.href}>
+                                                                                                    {thirdItem.title}
+                                                                                                </Link>
+                                                                                                {thirdItem.hasChild && forthClassMenu ? 
+                                                                                                    <div className='mb-forth-class-menu'>
+                                                                                                        <ul>
+                                                                                                            {forthClassMenu.map((forthItem,forthIndex)=>{
+                                                                                                                if(forthItem.mother===thirdItem.tag){
+                                                                                                                    return(
+                                                                                                                        <li key={forthIndex}>
+                                                                                                                            <Link to={forthItem.href}>
+                                                                                                                                {forthItem.title}
+                                                                                                                            </Link>
+                                                                                                                        </li>
+                                                                                                                    )    
+                                                                                                                }else{return null}
+                                                                                                            })}
+                                                                                                        </ul>
+                                                                                                    </div>
+                                                                                                : null}
+                                                                                            </li>
+                                                                                        )    
+                                                                                    }else{return null}
+                                                                                })}
+                                                                            </ul>
+
+                                                                        </div>
+                                                                    :null}
+                                                                </li>
+                                                            )
+                                                        }else{return null}
+                                                    })}
+                                                </ul>
+                                            </div> 
+                                        :null}                           
+                                    </li>
                                 )
                             }) : "لیستی وجود ندارد"}
                         </ul>
