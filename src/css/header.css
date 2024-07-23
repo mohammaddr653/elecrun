@@ -96,6 +96,7 @@ div#header-container div.menu-right nav>ul>li>a{
     padding-right: 10px;
     padding-left: 40px;
     display: flex;
+    /* color: white; */
     justify-content: start;
     align-items: center;
 
@@ -307,8 +308,14 @@ div#header-container div.menu-right nav>ul div.forth-class-menu>ul>li>a{
 
 
 div#header-container div.menu-right nav>ul>li>a{
-    color: #444;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.601);
 
+
+}
+div#header-container.header-container-change div.menu-right nav>ul>li>a{
+    color: #444;
+    text-shadow: none;
 }
 div#header-container div.menu-right button.search{
     display: flex;
@@ -317,13 +324,17 @@ div#header-container div.menu-right button.search{
     align-items: center;
     gap: 5px;
     font-family: 'iransans';
-    color: #444;
+    color: white;
     font-weight: 300;
     font-size: 14px;
     border: none;
     background-color: rgba(255, 0, 0, 0);
 
 }
+div#header-container.header-container-change div.menu-right button.search{
+    color: #444;
+}
+
 div#header-container div.menu-right button.search span{
     padding: 7px;
     width: 25px;
@@ -332,15 +343,24 @@ div#header-container div.menu-right button.search span{
     align-items: center;
     justify-content: center;
     border-radius: 100%;
+    background-color: white;
+}
+div#header-container.header-container-change div.menu-right button.search span{
     background-color: #444;
+
+
 }
 div#header-container div.menu-right button.search svg{
     /* background-color: #444; */
     /* padding: 10px; */
     /* border-radius: 100%; */
-    fill: white;
+    fill: #333;
     width: 100%;
     height: 100%;
+}
+div#header-container.header-container-change div.menu-right button.search svg{
+    fill:white;
+
 }
 
 
@@ -430,9 +450,6 @@ div#header-container>div.mobile-menu>div.list>ul>li{
     /* position: relative; */
     padding: 10px;
     /* height: max-content; */
-}
-div#header-container>div.mobile-menu>div.list>ul>li>div.head{
-    /* background-color: pink; */
 }
 div#header-container>div.mobile-menu>div.list>ul>li>div.head>a>svg{
 aspect-ratio: 1/1;
@@ -799,7 +816,10 @@ div#header-container>div.menu-bottom-dark-face.show{
 
 }
 /* md */
-@media only screen and (max-width: 768px) {    
+@media only screen and (max-width: 768px) {  
+    div#header-container{
+        background-color: white;
+    }
     div#header-container>div>div.menu-bottom.open{
         /* height: calc-size(auto); */
         display: none;

@@ -1,0 +1,168 @@
+div.banner-container{
+    background-color: red;
+}
+div.banner-container>div.single{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 429px;
+    /* aspect-ratio: 429/1503; */
+    
+}
+div.banner-container>div.single>div{
+    width: 100%;
+    background-color: yellow;
+    height: 100%;
+}
+div.banner-container>div.single>div>a{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+div.banner-container>div.single>div>a>img{
+    width: 100%;
+    object-fit:cover;
+    height: 100%;
+    background-color: rgb(0, 128, 128);
+    /* height: 100%; */
+    transform: scale(1);
+    transition: all 1s;
+
+
+}
+div.banner-container>div.single>div>a:hover>img{
+    transform: scale(1.2);
+    transition: all 1s;
+
+}
+div.banner-container>div.single>div>a>h4{
+    position: absolute;
+    bottom: 0;
+    padding: 25px 50px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 500;
+    font-family: 'iransans';
+    /* background-color: red; */
+    text-align: right;
+    width: 100%;
+    color: white;
+    line-height: 2.3rem;
+    margin: 0;
+    z-index: 2;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+
+}
+div.banner-container>div.single>div>a>span{
+
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(25, 25, 35, 0.596);
+}
+
+div.banner-container>div.slider{
+    background-color: pink;
+}
+
+
+/* slider */
+
+div.banner-container>div.slider{
+    margin-top: 50px;
+}
+div.banner-container>div.slider .slider-container img{
+    aspect-ratio: 1040/377;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+    
+}
+div.banner-container>div.slider .slider-container a{
+    position: relative;
+    width: 100%;
+    height: 250px;
+    display: flex;
+}
+div.banner-container>div.slider .slider-container a>h4{
+
+    position: absolute;
+    bottom: 0;
+    /* background-color: black; */
+    width: 100%;
+    margin: 0;
+    padding: 20px;
+    font-family: 'iransans';
+    font-size: 20px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    margin-bottom: 20px;
+    color: white;
+    line-height: 2.3rem;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+
+}
+div.banner-container>div.slider .slider-container a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+div.banner-container>div.slider .slider-container a>span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(25, 25, 35, 0.596);
+}
+div.banner-container>div.slider div.container{
+    border-radius: 5px;
+    overflow: hidden;
+}
+/* div#home-main-slider-container .slider-container span.carousel-control-next-icon,
+div#home-main-slider-container .slider-container span.carousel-control-prev-icon{
+
+    background-color: black;
+    border-radius: 100%;
+    
+
+} */
+div.banner-container>div.slider a.carousel-control-next,
+div.banner-container>div.slider a.carousel-control-prev{
+    display: none;
+}
+
+div.banner-container>div.slider .carousel-indicators{
+    margin-bottom: 0;
+}
+@media only screen and (max-width: 579px) {
+    div.banner-container>div.slider div.container{
+        border-radius: 0;
+        overflow: hidden;
+    }    
+    div.banner-container>div.slider .slider-container img{
+        aspect-ratio: 1040/577;
+        width: 100%;
+        object-fit: cover;
+        object-position: top;
+        
+    }
+    }
+

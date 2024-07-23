@@ -2,6 +2,7 @@ import Header from "./header";
 import './css/home-page.css';
 import Footer from "./footer";
 import { useEffect } from "react";
+import HomePageMain from "./home-page-main";
 
 const HomePage = () => {
     useEffect(() => {
@@ -15,6 +16,7 @@ const HomePage = () => {
     return (
         <div id="home-page">
             <Header></Header>
+            <HomePageMain></HomePageMain>
             {/* <Footer></Footer> */}
         </div>
     );

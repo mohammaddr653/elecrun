@@ -1,0 +1,6 @@
+div#home-page-main-container{
+    height:fit-content;
+    position: relative;
+    /* bottom: 100px; */
+    z-index: 1;
+}
