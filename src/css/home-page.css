@@ -15,4 +15,5 @@ a{
 div#home-page{
     width: 100vw;
     overflow-x: hidden;
+    /* margin-top: 50px; */
 }

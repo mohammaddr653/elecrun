@@ -1,5 +1,9 @@
 div.ads-container{
     background-color: blue;
+    display: none;
+}
+div.ads-container.open{
+    display: block;
 }
 div.ads-container div.col a{
     display: flex;
@@ -9,4 +13,33 @@ div.ads-container div.col a{
 div.ads-container div.col img{
     width: 100%;
 
+}
+div.ads-container div.close{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    position: relative;
+
+}
+div.ads-container div.close>h4{
+    font-family: 'iransans';
+    font-weight: 200;
+    font-size: 15px;
+    /* background-color: white; */
+    width: fit-content;
+    margin: 0;
+    /* padding: 10px; */
+    position: relative;
+    z-index: 1;
+    padding: 0;
+
+}
+div.ads-container div.close>hr{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
 }

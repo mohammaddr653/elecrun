@@ -7,7 +7,9 @@ const HomePageMain = () => {
         <main>
             <div id="home-page-main-container" className='container-fluid p-0 w-100'>
                 <Banner></Banner>
-                <Ads adsId={[1,3]}></Ads>
+                <div className="container bg-success p-0">
+                    <Ads adsId={[1,3]}></Ads>
+                </div>
             </div>
         </main>
     );

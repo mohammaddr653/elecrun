@@ -3,6 +3,7 @@ import './css/home-page.css';
 import Footer from "./footer";
 import { useEffect } from "react";
 import HomePageMain from "./home-page-main";
+import Ads from "./ads";
 
 const HomePage = () => {
     useEffect(() => {
