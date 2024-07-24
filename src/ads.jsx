@@ -20,9 +20,22 @@ const Ads = (props) => {
                 </h4>
                 <hr />
             </div>
-            <div className="row m-0 p-0 gap-4">
+            <div className="row d-none d-md-flex m-0 p-0 gap-4">
                 {globalCon.ads.map((item,index)=>{
                     if(props.adsId.includes(parseInt(item.id))){
+                        return(
+                            <div key={index} className='col p-0'>
+                                <a href={item.href}>
+                                    <img src={item.img} alt="#" />
+                                </a>
+                            </div>
+                        )
+                    }
+                })}
+            </div>
+            <div className="row d-flex d-md-none m-0 p-0 gap-4">
+                {globalCon.ads.map((item,index)=>{
+                    if(props.adsId[0]===parseInt(item.id)){
                         return(
                             <div key={index} className='col p-0'>
                                 <a href={item.href}>
