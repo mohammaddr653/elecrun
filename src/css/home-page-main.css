@@ -10,7 +10,7 @@ div#home-page-main-container{
 
 
 div#home-page-main-container div#main-page-arch-container{
-    background-color: yellow ;
+    background-color: #f9f9f9 ;
     height:fit-content;
     /* margin-top: 100px; */
     position: relative;
@@ -20,6 +20,7 @@ div#home-page-main-container div#main-page-arch-container{
     font-weight: 300;
     font-size: 15px;
     padding: 0;
+    padding: 25px 0;
     /* padding-top: 20px; */
 
 }
@@ -32,6 +33,7 @@ div#home-page-main-container div#main-page-arch-container>div.container div.main
     justify-content: space-between;
     /* align-items: start; */
     align-self:normal;
+    gap: 25px;
 }
 div#home-page-main-container div#main-page-arch-container>div.container aside.main-page-arch-side{
     padding: 0;
@@ -39,11 +41,11 @@ div#home-page-main-container div#main-page-arch-container>div.container aside.ma
     position: relative;
     /* top: 10px; */
     /* background-color: white; */
-    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.06);
+    /* box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.06); */
 
-    /* width: 23%; */
+    width: 100%;
     /* border-left:20px solid whitesmoke ; */
-    border-radius: 5px;
+    /* border-radius: 5px; */
     /* right: 0; */
     /* overflow-x: hidden; */
 
@@ -53,16 +55,23 @@ div#home-page-main-container div#main-page-arch-container>div.container aside.ma
     /* background-color: yellow; */
     /* padding: 5px; */
     position: static;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 50px;
     /* width: ; */
     /* top: 0; */
     /* min-width: fit-content; */
-    height: 200px;
+    /* height: 200px; */
 
 }
 
 div#home-page-main-container div#main-page-arch-container>div.container div.main-page-arch-body{
     /* background-color: pink; */
-    height: 500px;
+    height: fit-content;
+    width: 100%;
+
 }
 
 @media only screen and (max-width: 1170px) {
@@ -81,11 +90,11 @@ div#home-page-main-container div#main-page-arch-container>div.container div.main
         overflow: hidden;
         /* top: 10px; */
         /* background-color: white; */
-        box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.06);
+        /* box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.06); */
     
         width: 100%;
         /* border-left:20px solid whitesmoke ; */
-        border-radius: 5px;
+        /* border-radius: 5px; */
         /* right: 0; */
         /* overflow-x: hidden; */
     

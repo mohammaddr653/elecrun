@@ -1,6 +1,7 @@
 div.ads-container{
-    background-color: blue;
+    background-color: #F9F9F9;
     display: none;
+    /* padding: 25px 0; */
 }
 div.ads-container.open{
     display: block;
@@ -26,14 +27,15 @@ div.ads-container div.close{
 div.ads-container div.close>h4{
     font-family: 'iransans';
     font-weight: 200;
-    font-size: 15px;
-    /* background-color: white; */
+    font-size: 13px;
+    background-color: #F9F9F9;
     width: fit-content;
     margin: 0;
     /* padding: 10px; */
     position: relative;
     z-index: 1;
     padding: 0;
+    padding-left: 5px;
 
 }
 div.ads-container div.close>hr{
@@ -42,4 +44,7 @@ div.ads-container div.close>hr{
     margin: 0;
     padding: 0;
     z-index: 0;
+}
+div.ads-container div.row{
+    gap: 25px;
 }

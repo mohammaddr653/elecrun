@@ -1,0 +1,173 @@
+div.three-box-container{
+    /* background-color: pink; */
+    /* width: max-content; */
+    padding: 0;
+    width: 300px;
+}
+div.three-box-container div.close{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    margin: 0;
+    margin-bottom: 10px;
+
+
+}
+div.three-box-container div.close>h4::before{
+    content: "|";
+    /* border: 2px solid red; */
+    height: 100%;
+    width: 2px;
+    background-color: red;
+    color: red;
+    /* fill: red; */
+    border-radius: 30px;
+    margin-left: 5px;
+
+}
+div.three-box-container div.close>h4{
+    font-family: 'iransans';
+    font-weight: 300;
+    /* position: relative; */
+    font-size: 16px;
+    background-color: #F9F9F9;
+    width: fit-content;
+    margin: 0;
+    /* padding: 10px; */
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    padding-left: 5px;
+
+}
+div.three-box-container div.close>hr{
+    width: 100%;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    z-index: 0;
+}
+div.three-box-container div.close>button{
+    width: fit-content;
+    outline: none;
+    border: none;
+    background-color: #F9F9F9;
+    font-family: 'iransans';
+    font-weight: 300;
+    position: relative;
+    font-size: 13px;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 5px;
+    align-items: center;
+    padding: 0;
+    padding-right: 10px;
+
+}
+div.three-box-container div.close>button>svg{
+    fill: red;
+
+}
+
+
+div.three-box-container div.three-box{
+    padding: 0;
+    /* background-color: brown; */
+    gap: 15px;
+}
+div.three-box-container div.three-box>article.box-cart{
+
+    background-color: greenyellow;
+    padding: 0;
+}
+div.three-box-container div.three-box>article.box-cart>a{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 0;
+
+}
+div.three-box-container div.three-box>article.box-cart>a>div.image{
+
+    aspect-ratio: 300/200;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+div.three-box-container div.three-box>article.box-cart>a>div.image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1);
+    transition: all .5s;
+
+}
+div.three-box-container div.three-box>article.box-cart>a:hover>div.image>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2);
+    transition: all .5s ease-in-out;
+
+}
+div.three-box-container div.three-box>article.box-cart>a>span{
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    padding: 20px;
+    z-index: 1;
+    background-color: rgba(25, 25, 35, 0.596);
+}
+div.three-box-container div.three-box>article.box-cart>a>span>h4{
+    margin: 0;
+    padding: 0;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    color: whitesmoke;
+    width: fit-content;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5rem;
+
+}
+div.three-box-container div.three-box>article.box-cart:nth-child(1)>a>span>h4{
+    font-size: 20px;
+}
+
+div.three-box-container div.three-box>article.box-cart>a>div.bottom{
+    position: absolute;
+    bottom: 0;
+    /* background-color: aqua; */
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    text-shadow: 1px 1px rgba(0, 0, 0, 0.941);
+    font-weight: 300;
+    font-size: 14px;
+    z-index: 1;
+}
+div.three-box-container div.three-box>article.box-cart>a>div.bottom>span{
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
