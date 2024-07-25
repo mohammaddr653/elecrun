@@ -7,11 +7,11 @@ import Ads from "./ads";
 
 const HomePage = () => {
     useEffect(() => {
-        window.scrollTo({
-            top: 0,
-            left: 0,
-            // behavior: "smooth",
-        });
+        // window.scrollTo({
+        //     top: 0,
+        //     left: 0,
+        //     behavior: "smooth",
+        // });
     },[]);
     return (
         <div id="home-page">

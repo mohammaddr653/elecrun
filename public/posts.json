@@ -5,7 +5,8 @@
         "id":"1",
         "mother":"tech",
         "img":"../images/mclaren_570s_cgi-HD (1).jpg",
-        "readingTime":"16'"
+        "readingTime":"16'",
+        "commentsNum":"14"
 
     },
     {
@@ -14,7 +15,9 @@
         "id":"2",
         "mother":"news",
         "img":"../images/mclaren_750s_coupe_2023_interior-HD (1).jpg",
-        "readingTime":"14'"
+        "readingTime":"14'",
+        "commentsNum":"1"
+
     },
     {
         "href": "#",
@@ -22,7 +25,9 @@
         "id":"3",
         "mother":"tech",
         "img":"../images/2025_cadillac_escalade_v_5k-HD (1).jpg",
-        "readingTime":"20'"
+        "readingTime":"20'",
+        "commentsNum":"12"
+
     },
     {
         "href": "#",
@@ -30,7 +35,8 @@
         "id":"4",
         "mother":"news",
         "img":"../images/audi_s5_tfsi_quattro_2024_8k-HD.jpg",
-        "readingTime":"14'"
+        "readingTime":"14'",
+        "commentsNum":"45"
     },
     {
         "href": "#",
@@ -38,7 +44,8 @@
         "id":"5",
         "mother":"tech",
         "img":"../images/wp3087628-chevrolet-camaro-z28-wallpapers.jpg",
-        "readingTime":"23'"
+        "readingTime":"23'",
+        "commentsNum":"32"
     },
     {
         "href": "#",
@@ -46,7 +53,8 @@
         "id":"6",
         "mother":"tech",
         "img":"../images/novitec_mclaren_artura_2024_8k-HD.jpg",
-        "readingTime":"14'"
+        "readingTime":"14'",
+        "commentsNum":"56"
     },
     {
         "href": "#",
@@ -54,7 +62,8 @@
         "id":"7",
         "mother":"news",
         "img":"../images/wp2393369-nissan-titan-wallpapers.jpg",
-        "readingTime":"45'"
+        "readingTime":"45'",
+        "commentsNum":"21"
     },
     {
         "href": "#",
@@ -62,7 +71,8 @@
         "id":"8",
         "mother":"tech",
         "img":"../images/wp4198066-mercedes-suv-wallpapers.jpg",
-        "readingTime":"30'"
+        "readingTime":"30'",
+        "commentsNum":"22"
     },
     {
         "href": "#",
@@ -70,7 +80,8 @@
         "id":"9",
         "mother":"tech",
         "img":"../images/white_jeep-edit-09-1.jpg",
-        "readingTime":"10'"
+        "readingTime":"10'",
+        "commentsNum":"23"
     },
     {
         "href": "#",
@@ -78,7 +89,8 @@
         "id":"10",
         "mother":"tech",
         "img":"../images/PHOTOS01_821009999_PH_15_0.jpg",
-        "readingTime":"5'"
+        "readingTime":"5'",
+        "commentsNum":"32"
     },
     {
         "href": "#",
@@ -86,7 +98,8 @@
         "id":"11",
         "mother":"tech",
         "img":"../images/wp10433261-2022-ford-bronco-wallpapers.jpg",
-        "readingTime":"14'"
+        "readingTime":"14'",
+        "commentsNum":"23"
     },
     {
         "href": "#",
@@ -94,7 +107,8 @@
         "id":"12",
         "mother":"tech",
         "img":"../images/audi_rs7_8k-HD.jpg",
-        "readingTime":"15'"
+        "readingTime":"15'",
+        "commentsNum":"30"
     }
 
 ]

@@ -3,6 +3,9 @@ div#home-page-main-container{
     position: relative;
     /* bottom: 100px; */
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
 }
 
 
@@ -20,7 +23,7 @@ div#home-page-main-container div#main-page-arch-container{
     font-weight: 300;
     font-size: 15px;
     padding: 0;
-    padding: 25px 0;
+    /* padding: 25px 0; */
     /* padding-top: 20px; */
 
 }
