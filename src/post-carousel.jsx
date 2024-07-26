@@ -21,22 +21,52 @@ import SwiperButtonPrev from './swiper-button-prev';
 const PostCarousel = (props) => {
     let globalCon=useContext(globalContext);
     const[contentArray,setContentArray]=useState([]);
-    
+    // const[Array,setContentArray]=useState([]);
+
     let a;
     const swiper=useSwiper();
 
     useEffect(()=>{
+        // let firstButton=
+        // setData(e,"main")  
         a=[];
         for(let item of globalCon.posts){
-            if(item.mother.includes(props.mother)){
-                a.push(item);
-                setContentArray([
-                    ...a
-                ])
+            if(props.label){
+                if(item.mother.includes(props.mother) && item.label.includes(props.label[0])){
+                    a.push(item);
+                }
+            }else{
+                if(item.mother.includes(props.mother)){
+                    a.push(item);
+                }
             }
-        }        
+        } 
+        setContentArray([
+            ...a
+        ])                            
     },[globalCon.posts])
 
+    function setData(e){
+        let a=[];
+        let target=e.currentTarget;
+        let allButtons=target.parentElement.querySelectorAll("button");
+        console.log(target);
+        for(let button of allButtons){
+            button.classList.remove("clicked");
+        }
+        target.classList.add("clicked");
+        for(let content of globalCon.posts){
+            if(content.mother.includes(props.mother)){
+                if(content.label.includes(target.attributes.label.value)){
+                    a.push(content);
+                }    
+            }
+        }
+        setContentArray([
+            ...a
+        ])                        
+
+    }
 
     useEffect(()=>{
         // addItemsToCarousel();
@@ -59,9 +89,23 @@ const PostCarousel = (props) => {
             </div>
             <div className='row buttons w-100 p-0 m-0'>
                 <div className=''>
-                    <button>مطالب</button>
-                    <button>ویدیو</button>
-                    <button>بررسی</button>
+                    {props.label? props.label.map((item,index)=>{
+                        if(index===0){
+                            return(
+                                <button key={index} className='post-carousel-batton clicked' label={item} onClick={function(e){
+                                    setData(e);
+                                }}>{item}</button>
+                            )
+
+                        }else{
+                            return(
+                                <button key={index} className='post-carousel-batton' label={item} onClick={function(e){
+                                    setData(e);
+                                }}>{item}</button>
+                            )
+
+                        }
+                    }):null}
                 </div>
             </div>
 
@@ -113,6 +157,7 @@ const PostCarousel = (props) => {
                                                     </svg>
                                                     {item.commentsNum}
                                                 </span>
+                                                <span className='px-2'>{item.label}</span>
                                             </div>
                                             <div className='left'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-three-dots" viewBox="0 0 16 16">
