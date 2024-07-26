@@ -95,9 +95,9 @@ const HomePageMain = () => {
                     <Ads adsId={[1,3]}></Ads>
                 </div>
                 <div className="container p-0">
-                    {/* PostCarousel can have this propses : title , mother , seeAllUrl */}
+                    {/* PostCarousel can have this propses : title , mother , seeAllUrl , label */}
 
-                    <PostCarousel title={"پیشنهاد سردبیر"} mother={"tech"} seeAllUrl={"https://digikala.com"}></PostCarousel>
+                    <PostCarousel title={"پیشنهاد سردبیر"} mother={"tech"} seeAllUrl={"https://digikala.com"} label={["ویدیو","مطلب","بررسی"]}></PostCarousel>
                 </div>
 
                 <div className="container p-0">

@@ -21,6 +21,7 @@ import SwiperButtonPrev from './swiper-button-prev';
 const PostCarousel = (props) => {
     let globalCon=useContext(globalContext);
     const[contentArray,setContentArray]=useState([]);
+    
     let a;
     const swiper=useSwiper();
 

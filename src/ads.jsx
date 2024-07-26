@@ -6,7 +6,6 @@ import globalContext from './context/global-context';
 
 const Ads = (props) => {
     let globalCon=useContext(globalContext);
-    console.log(props.adsId)
     return ( 
         <div className='ads-container open container-fluid px-0 w-100'>
             <div className='row close w-100  m-0 mb-1 p-0'>
