@@ -14,7 +14,7 @@ const ThreeBox = (props) => {
     useEffect(()=>{
         a=[];
         for(let item of globalCon.posts){
-            if(item.mother===props.mother){
+            if(item.mother.includes(props.mother)){
                 a.push(item);
                 setContentArray([
                     ...a

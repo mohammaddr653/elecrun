@@ -27,7 +27,7 @@ const PostCarousel = (props) => {
     useEffect(()=>{
         a=[];
         for(let item of globalCon.posts){
-            if(item.mother===props.mother){
+            if(item.mother.includes(props.mother)){
                 a.push(item);
                 setContentArray([
                     ...a
@@ -36,29 +36,7 @@ const PostCarousel = (props) => {
         }        
     },[globalCon.posts])
 
-    function addItemsToCarousel(){
-        let items=`
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-            <div>ss</div>
-        `
-        let owlCarousel=document.getElementById("owl-carousel-container");
-        owlCarousel.innerHTML=items;
-    }
+
     useEffect(()=>{
         // addItemsToCarousel();
     },[])
@@ -91,20 +69,21 @@ const PostCarousel = (props) => {
                     modules={[Navigation, Pagination, Scrollbar, A11y]}
                     // navigation
                     spaceBetween={30}
-                    slidesPerView={1}
+                    // slidesPerView={4}
+                    // num={5}
                     onSlideChange={() => console.log('slide change')}
                     onSwiper={(swiper) => console.log(swiper)}
                     breakpoints={{
+                        0:{
+                            slidesPerView: 1,
+                        },
                         576: {
-                          // width: 576,
                           slidesPerView: 2,
                         },
                         768: {
-                          // width: 768,
                           slidesPerView: 3,
                         },
                         992: {
-                            // width: 300,
                             slidesPerView: 4,
                         },
   

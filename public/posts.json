@@ -3,7 +3,7 @@
         "href": "#",
         "title": "بررسی گلکسی زد فلیپ 6 ، جا مانده بیخیال",
         "id":"1",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/mclaren_570s_cgi-HD (1).jpg",
         "readingTime":"16'",
         "commentsNum":"14"
@@ -13,7 +13,7 @@
         "href": "#",
         "title": "دنیا در کام صفحه آبی مرگ؛‌ چطور یک‌ به‌روزرسانی ساده جهان را به آشوب کشید",
         "id":"2",
-        "mother":"news",
+        "mother":["news"],
         "img":"../images/mclaren_750s_coupe_2023_interior-HD (1).jpg",
         "readingTime":"14'",
         "commentsNum":"1"
@@ -23,7 +23,7 @@
         "href": "#",
         "title": "بررسی سونی اکسپریا 1 مارک 6 ، ایستاده مردن",
         "id":"3",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/2025_cadillac_escalade_v_5k-HD (1).jpg",
         "readingTime":"20'",
         "commentsNum":"12"
@@ -33,7 +33,7 @@
         "href": "#",
         "title": "این هیوندای توسان ۲۰۲۵ است؛ شاسی‌بلند محبوب با قیمت بیشتر از مدل قبلی",
         "id":"4",
-        "mother":"news",
+        "mother":["news"],
         "img":"../images/audi_s5_tfsi_quattro_2024_8k-HD.jpg",
         "readingTime":"14'",
         "commentsNum":"45"
@@ -42,7 +42,7 @@
         "href": "#",
         "title": "نرم‌افزار حرفه‌ای Blackmagic Camera وارد تعداد بیشتری از گوشی‌های سامسونگ و گوگل شد",
         "id":"5",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/wp3087628-chevrolet-camaro-z28-wallpapers.jpg",
         "readingTime":"23'",
         "commentsNum":"32"
@@ -51,7 +51,7 @@
         "href": "#",
         "title": "مدلی ویژه و بسیار امن از گلکسی A55 سامسونگ در راه است",
         "id":"6",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/novitec_mclaren_artura_2024_8k-HD.jpg",
         "readingTime":"14'",
         "commentsNum":"56"
@@ -60,7 +60,7 @@
         "href": "#",
         "title": "پیکسل ۹ و پیکسل ۹ پرو ایکس‌ال در رندرهای لورفته رؤیت شدند",
         "id":"7",
-        "mother":"news",
+        "mother":["news"],
         "img":"../images/wp2393369-nissan-titan-wallpapers.jpg",
         "readingTime":"45'",
         "commentsNum":"21"
@@ -69,7 +69,7 @@
         "href": "#",
         "title": "همه چیز درباره بازی همستر کامبت [بخش‌های جدید همستر اضافه شد + کارت‌های امروز 1 مرداد]",
         "id":"8",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/wp4198066-mercedes-suv-wallpapers.jpg",
         "readingTime":"30'",
         "commentsNum":"22"
@@ -78,7 +78,7 @@
         "href": "#",
         "title": "مدیرعامل شرکت خودروسازی ریویان از رابطه تجاری با اپل می‌گوید",
         "id":"9",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/white_jeep-edit-09-1.jpg",
         "readingTime":"10'",
         "commentsNum":"23"
@@ -87,7 +87,7 @@
         "href": "#",
         "title": "ردمی می‌گوید ردمی K70 اولترا در ۳ ساعت ابتدایی عرضه، رکورد فروش ۲۰۲۴ را شکست",
         "id":"10",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/PHOTOS01_821009999_PH_15_0.jpg",
         "readingTime":"5'",
         "commentsNum":"32"
@@ -96,7 +96,7 @@
         "href": "#",
         "title": "پاسپورت ۲۰۲۵ «توانمندترین شاسی‌بلند تاریخ هوندا» خواهد بود",
         "id":"11",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/wp10433261-2022-ford-bronco-wallpapers.jpg",
         "readingTime":"14'",
         "commentsNum":"23"
@@ -105,7 +105,7 @@
         "href": "#",
         "title": "کاربران ایرانی سامسونگ از اواخر پاییز امسال به شبکه 5G خوشامد می‌گویند",
         "id":"12",
-        "mother":"tech",
+        "mother":["tech"],
         "img":"../images/audi_rs7_8k-HD.jpg",
         "readingTime":"15'",
         "commentsNum":"30"

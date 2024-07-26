@@ -146,10 +146,13 @@ div.post-carousel-container div.post-carousel button.swiper-next{
 div.post-carousel-container div.post-carousel div.post-card{
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.178);
 
+
 }
 div.post-carousel-container div.post-carousel div.swiper{
     /* background-color: green; */
     padding: 10px 0;
+    width: 100%;
+    /* height: 100%; */
 }
 div.post-carousel-container div.post-carousel div.post-card>a{
     background-color: white;

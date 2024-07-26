@@ -103,7 +103,7 @@ const HomePageMain = () => {
                 <div className="container p-0">
                     {/* PostCarousel can have this propses : title , mother , seeAllUrl */}
 
-                    <PostCarousel title={"پیشنهاد سردبیر"} mother={"tech"} seeAllUrl={"https://digikala.com"}></PostCarousel>
+                    <PostCarousel title={"پیشنهاد سردبیر"} mother={"news"} seeAllUrl={"https://digikala.com"}></PostCarousel>
                 </div>
 
 
