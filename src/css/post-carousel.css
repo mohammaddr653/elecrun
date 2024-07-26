@@ -105,11 +105,19 @@ div.post-carousel-container div.post-carousel{
     gap: 15px;
     position: relative;
     display: flex;
+    z-index: 1;
+    /* overflow-x: visible; */
 }
-div.post-carousel-container div.post-carousel>button{
+div.post-carousel-container div.swiper{
+    position: initial;
+    z-index: 1;
+    /* overflow: visible; */
+}
+div.post-carousel-container div.post-carousel button{
     border: none;
     width: 30px;
     height: 100%;
+    /* background-color: red; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -117,15 +125,22 @@ div.post-carousel-container div.post-carousel>button{
     margin: 0;
     background-color: unset;
 }
-div.post-carousel-container div.post-carousel>button.swiper-prev{
+div.post-carousel-container div.post-carousel button.swiper-prev{
     position: absolute;
     right: -30px;
+    margin-left: 115px;
+
+    z-index: 2;
+    top: 0;
 
 }
-div.post-carousel-container div.post-carousel>button.swiper-next{
+div.post-carousel-container div.post-carousel button.swiper-next{
 
     position: absolute;
     left: -30px;
+    top: 0;
+    z-index: 2;
+
 
 }
 div.post-carousel-container div.post-carousel div.post-card{

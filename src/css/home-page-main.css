@@ -124,10 +124,9 @@ div#home-page-main-container div#main-page-arch-container>div.container div.main
 }
 
 @media only screen and (max-width: 579px) {
-    div#home-page-main-container div#main-page-arch-container>div.container{
-        /* background-color: yellow; */
+    /* div#home-page-main-container div#main-page-arch-container>div.container{
         padding: 0 10px;
-    }
+    } */
 }
 @media only screen and (max-width: 500px) {
 

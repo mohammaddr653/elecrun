@@ -100,6 +100,13 @@ const HomePageMain = () => {
                     <PostCarousel title={"پیشنهاد سردبیر"} mother={"tech"} seeAllUrl={"https://digikala.com"}></PostCarousel>
                 </div>
 
+                <div className="container p-0">
+                    {/* PostCarousel can have this propses : title , mother , seeAllUrl */}
+
+                    <PostCarousel title={"پیشنهاد سردبیر"} mother={"tech"} seeAllUrl={"https://digikala.com"}></PostCarousel>
+                </div>
+
+
                 {/* start for main archive */}
 
                 <div id="main-page-arch-container" className='container-fluid w-100'>
