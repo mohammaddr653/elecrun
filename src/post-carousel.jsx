@@ -142,6 +142,27 @@ const PostCarousel = (props) => {
                                         <div>
                                             <div className='image'> 
                                                 <img src={item.img} alt="#" />
+                                                {item.label ? 
+                                                    <div className="image-icons">
+                                                        {item.label.map((icon,iconIndex)=>{
+                                                            return(
+                                                                <span key={iconIndex} className=''>
+                                                                    {icon==="ویدیو" ? 
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-play-fill p-0 m-0" viewBox="0 0 16 16">
+                                                                            <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+                                                                        </svg>
+                                                                    :null}
+                                                                    {icon==="مطلب" ? 
+                                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-text-paragraph p-0 m-0" viewBox="0 0 16 16">
+                                                                            <path fill-rule="evenodd" d="M2 12.5a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m0-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5m4-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5"/>
+                                                                        </svg>
+                                                                    :null}
+
+                                                                </span>
+                                                            )
+                                                        })}
+                                                    </div>
+                                                :null}
                                             </div>
                                             <div className='caption'>
                                                 <div className="title w-100">
@@ -157,7 +178,6 @@ const PostCarousel = (props) => {
                                                     </svg>
                                                     {item.commentsNum}
                                                 </span>
-                                                <span className='px-2'>{item.label}</span>
                                             </div>
                                             <div className='left'>
                                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-three-dots" viewBox="0 0 16 16">
