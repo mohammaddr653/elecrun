@@ -14,7 +14,7 @@ const Search = (props) => {
             let searchInput = document.querySelectorAll('div.search-container .search-input')[tagNum];
             let results;
             async function getData(){
-                const response = await axios.get("https://jsonplaceholder.typicode.com/users",);
+                const response = await axios.get("../posts.json",);
                 results=response.data;
             }
             getData();
@@ -25,7 +25,7 @@ const Search = (props) => {
             function inputMatch(x){
                 searchResults=[];
                 for(let result of results){
-                    let match= result.name.toLowerCase().includes(x) && (x !=="") && (x !==" ") && (x !==null);
+                    let match= result.title.toLowerCase().includes(x) && (x !=="") && (x !==" ") && (x !==null);
                     if(match){
                         searchResults.push(result);
                     }
@@ -89,10 +89,10 @@ const Search = (props) => {
                             <div className='search-result-container' key={index}>
                                 <a href=" ">
                                     <div className="result-right">
-                                        {/* <img src="images/wp2465923-javascript-wallpapers.jpg" alt="5" /> */}
+                                        <img src={result.img} alt="#" />
                                     </div>
                                     <div className='result-left'>
-                                        <h4>{result.name}</h4>
+                                        <h4>{result.title}</h4>
                                     </div>
                                 </a>
                             </div>
